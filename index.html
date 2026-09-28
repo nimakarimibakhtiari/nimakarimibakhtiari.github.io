@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Aerospace engineering portfolio. Nima Karimi, BEng Aerospace Engineering at Swansea University, graduating 2028. Design and build work, a Thales UK internship, laboratory experience and tools.">
+<meta name="author" content="Nima Karimi">
+<meta name="theme-color" content="#0B1319">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nima Karimi">
+<meta property="og:description" content="Aerospace engineering portfolio. Second year BEng at Swansea University, open to placements for 2027.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  html { color-scheme: light dark; }
+  body { margin: 0; padding: 0; }
+  img { max-width: 100%; }
+  [hidden]:not([hidden="until-found"]) { display: none !important; }
+</style>
+<title>Nima Karimi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300..500&display=swap">
+<style>
+  /* ---- dark first token set ---- */
+  :root {
+    --ground:      #0B1319;
+    --ground-2:    #101C24;
+    --ground-3:    #16252E;
+    --line:        #1F3440;
+    --line-strong: #2C4756;
+    --ink:         #E7EFF3;
+    --ink-2:       #B3C7D1;
+    --muted:       #7E97A4;
+    --cool:        #4FC3D9;
+    --warm:        #F0A63C;
+    --hot:         #FF5526;
+    --glow:        rgba(255, 85, 38, .22);
+
+    --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --f-body:    "Newsreader", Georgia, "Times New Roman", serif;
+    --f-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --shell: 1120px;
+    --gut: clamp(18px, 4vw, 56px);
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --ground:      #E9EEF1;
+      --ground-2:    #FFFFFF;
+      --ground-3:    #F3F7F9;
+      --line:        #CBD8DF;
+      --line-strong: #A9BDC8;
+      --ink:         #0C1A22;
+      --ink-2:       #2E4652;
+      --muted:       #5B7180;
+      --cool:        #16778E;
+      --warm:        #A96C10;
+      --hot:         #D23C0B;
+      --glow:        rgba(210, 60, 11, .14);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:      #E9EEF1;
+    --ground-2:    #FFFFFF;
+    --ground-3:    #F3F7F9;
+    --line:        #CBD8DF;
+    --line-strong: #A9BDC8;
+    --ink:         #0C1A22;
+    --ink-2:       #2E4652;
+    --muted:       #5B7180;
+    --cool:        #16778E;
+    --warm:        #A96C10;
+    --hot:         #D23C0B;
+    --glow:        rgba(210, 60, 11, .14);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .shell {
+    max-width: var(--shell);
+    margin: 0 auto;
+    padding-inline: var(--gut);
+  }
+  a { color: inherit; }
+  ::selection { background: var(--hot); color: #fff; }
+  :focus-visible { outline: 2px solid var(--cool); outline-offset: 3px; }
+
+  .mono {
+    font-family: var(--f-mono);
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* ---- hero ---- */
+  .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+  #flow {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    display: block; pointer-events: none; opacity: .85;
+  }
+  .hero-in {
+    position: relative; z-index: 1;
+    padding-block: clamp(64px, 13vh, 128px) clamp(48px, 9vh, 88px);
+    display: flex; flex-direction: column; gap: 26px;
+  }
+  .eyebrow { color: var(--cool); display: flex; flex-wrap: wrap; gap: 10px 16px; }
+  .eyebrow span:not(:last-child)::after { content: " /"; color: var(--line-strong); margin-left: 14px; }
+  h1 {
+    margin: 0;
+    font-family: var(--f-display);
+    font-variation-settings: "wdth" 118, "wght" 800;
+    font-size: clamp(50px, 12.5vw, 142px);
+    line-height: .86;
+    letter-spacing: -.025em;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+  h1 .second { display: block; color: var(--hot); }
+  .lead {
+    max-width: 30em; font-size: clamp(18px, 2.1vw, 22px);
+    line-height: 1.5; color: var(--ink-2); margin: 0;
+  }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .links a {
+    text-decoration: none; padding: 10px 16px;
+    border: 1px solid var(--line-strong); border-radius: 2px;
+    background: color-mix(in srgb, var(--ground-2) 72%, transparent);
+    transition: border-color .18s, color .18s, background .18s;
+  }
+  .links a:hover { border-color: var(--hot); color: var(--hot); }
+
+  /* ---- section frame ---- */
+  section { border-bottom: 1px solid var(--line); }
+  .sec-head {
+    display: flex; align-items: baseline; gap: 18px;
+    padding-block: 40px 26px;
+  }
+  .sec-head .idx { color: var(--hot); }
+  .sec-head h2 {
+    margin: 0; font-family: var(--f-display);
+    font-variation-settings: "wdth" 108, "wght" 700;
+    font-size: clamp(21px, 3vw, 29px); letter-spacing: -.01em;
+    text-transform: uppercase;
+  }
+  .sec-head .rule { flex: 1; height: 1px; background: var(--line); align-self: center; }
+
+  /* ---- drawing sheets ---- */
+  .sheets { display: flex; flex-direction: column; gap: 28px; padding-bottom: 56px; }
+  .sheet {
+    background: var(--ground-2);
+    border: 1px solid var(--line);
+    display: grid; grid-template-columns: 1fr;
+  }
+  .sheet-body { padding: clamp(22px, 3.4vw, 40px); display: flex; flex-direction: column; gap: 16px; }
+  .sheet h3 {
+    margin: 0; font-family: var(--f-display);
+    font-variation-settings: "wdth" 104, "wght" 700;
+    font-size: clamp(25px, 3.6vw, 38px); line-height: 1.06;
+    letter-spacing: -.018em; text-wrap: balance;
+  }
+  .sheet p { margin: 0; max-width: 62ch; color: var(--ink-2); }
+  .sheet p strong { color: var(--ink); font-weight: 500; }
+  .takeaway {
+    border-left: 2px solid var(--hot);
+    padding-left: 18px; color: var(--ink) !important;
+    font-size: 18px;
+  }
+  /* title block: real drawing sheet convention */
+  .titleblock {
+    border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+  }
+  .tb-cell {
+    padding: 14px clamp(14px, 2vw, 20px);
+    border-right: 1px solid var(--line);
+    display: flex; flex-direction: column; gap: 6px;
+    min-width: 0;
+  }
+  .tb-cell:last-child { border-right: 0; }
+  .tb-cell .k { color: var(--muted); font-size: 10.5px; }
+  .tb-cell .v {
+    font-family: var(--f-mono); font-size: 13px; line-height: 1.35;
+    font-variant-numeric: tabular-nums; overflow-wrap: anywhere;
+  }
+  .tb-cell .v.flag-warm { color: var(--warm); }
+  .tb-cell .v.flag-cool { color: var(--cool); }
+
+  /* ---- grids ---- */
+  .grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 56px; }
+  .g3 { grid-template-columns: repeat(3, 1fr); }
+  .g2 { grid-template-columns: repeat(2, 1fr); }
+  .cell { background: var(--ground-2); padding: clamp(20px, 2.6vw, 30px); display: flex; flex-direction: column; gap: 10px; }
+  .cell h4 {
+    margin: 0; font-family: var(--f-display);
+    font-variation-settings: "wdth" 100, "wght" 650;
+    font-size: 19px; line-height: 1.2; letter-spacing: -.005em;
+  }
+  .cell p { margin: 0; font-size: 15.5px; line-height: 1.55; color: var(--ink-2); }
+  .cell .tag { color: var(--cool); }
+
+  /* ---- tools ---- */
+  .tools { display: flex; flex-direction: column; margin-bottom: 56px; border-top: 1px solid var(--line); }
+  .tool {
+    display: grid; grid-template-columns: minmax(0,1fr) auto;
+    gap: 10px 24px; align-items: baseline;
+    padding: 15px 0; border-bottom: 1px solid var(--line);
+  }
+  .tool .name { font-family: var(--f-display); font-variation-settings: "wdth" 100, "wght" 600; font-size: 18px; }
+  .tool .note { grid-column: 1; color: var(--muted); font-size: 15px; }
+  .tool .lvl { grid-row: 1 / span 2; align-self: center; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; }
+  .lvl.working { color: var(--warm); }
+  .lvl.learning { color: var(--cool); }
+
+  /* ---- education ---- */
+  .edu { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 56px; }
+  .edu > div { background: var(--ground-2); padding: clamp(20px, 2.8vw, 32px); }
+  .edu h4 { margin: 0 0 6px; font-family: var(--f-display); font-variation-settings: "wdth" 102, "wght" 650; font-size: 20px; }
+  .edu .where { color: var(--muted); margin: 0 0 18px; font-size: 15px; }
+  .figure { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+  .figure .n {
+    font-family: var(--f-display); font-variation-settings: "wdth" 112, "wght" 800;
+    font-size: 46px; line-height: 1; color: var(--hot); font-variant-numeric: tabular-nums;
+  }
+  .figure .cap { color: var(--muted); font-size: 14px; line-height: 1.3; }
+  .modlist { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 7px; }
+  .modlist li {
+    font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .02em;
+    border: 1px solid var(--line-strong); padding: 5px 9px; color: var(--ink-2);
+  }
+
+  /* ---- contact ---- */
+  .contact { border-bottom: 0; }
+  .contact-in { padding-block: clamp(52px, 9vw, 96px); display: flex; flex-direction: column; gap: 22px; }
+  .contact h2 {
+    margin: 0; font-family: var(--f-display);
+    font-variation-settings: "wdth" 116, "wght" 800;
+    font-size: clamp(34px, 8vw, 82px); line-height: .92;
+    letter-spacing: -.025em; text-transform: uppercase; text-wrap: balance;
+  }
+  .contact h2 em { font-style: normal; color: var(--hot); }
+  .foot { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); padding-bottom: 44px; }
+
+  @media (max-width: 860px) {
+    .g3, .g2, .edu { grid-template-columns: 1fr; }
+    .titleblock { grid-template-columns: 1fr 1fr; }
+    .tb-cell:nth-child(2n) { border-right: 0; }
+    .tb-cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 480px) {
+    .titleblock { grid-template-columns: 1fr; }
+    .tb-cell { border-right: 0; border-bottom: 1px solid var(--line); }
+    .tb-cell:last-child { border-bottom: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+  }
+
+  /* ---- hero instrument controls ---- */
+  .sim-ctl {
+    display: flex; flex-direction: column; gap: 10px;
+    max-width: 560px; padding: 16px 18px;
+    border: 1px solid var(--line-strong);
+    background: color-mix(in srgb, var(--ground-2) 78%, transparent);
+  }
+  .sim-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .sim-row label { color: var(--muted); white-space: nowrap; }
+  .sim-ctl input[type="range"] {
+    flex: 1 1 140px; min-width: 120px; accent-color: var(--hot);
+    height: 18px; background: transparent; cursor: pointer;
+  }
+  .sim-read {
+    font-family: var(--f-mono); font-size: 13px; font-variant-numeric: tabular-nums;
+    color: var(--warm); min-width: 6.2em; text-align: right;
+  }
+  .sim-note { color: var(--muted); font-size: 11px; line-height: 1.5; letter-spacing: .06em; }
+  .sim-note.alert { color: var(--hot); }
+  .sim-ctl hr { border: 0; border-top: 1px solid var(--line); margin: 2px 0 0; width: 100%; }
+  .sim-data {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--line); border: 1px solid var(--line);
+  }
+  .sim-cell {
+    background: var(--ground-2); padding: 9px 11px;
+    display: flex; flex-direction: column; gap: 4px; min-width: 0;
+  }
+  .sim-cell .k { color: var(--muted); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; }
+  .sim-cell .v {
+    font-family: var(--f-mono); font-size: 13px; line-height: 1.2;
+    font-variant-numeric: tabular-nums; overflow-wrap: anywhere; color: var(--ink);
+  }
+  .sim-cell .v.ok { color: var(--cool); }
+  .sim-cell .v.warn { color: var(--warm); }
+  .sim-cell .v.bad { color: var(--hot); }
+  .sim-story {
+    color: var(--ink-2); font-family: var(--f-body); font-size: 14.5px;
+    line-height: 1.55; letter-spacing: 0; text-transform: none; margin: 0;
+  }
+  @media (max-width: 520px) { .sim-data { grid-template-columns: repeat(2, 1fr); } }
+
+  .specblock { border: 1px solid var(--line); background: var(--ground-2); }
+  .specblock .titleblock { border-top: 0; }
+
+  /* ---- programme log ---- */
+  .log { border-top: 1px solid var(--line); margin-bottom: 56px; }
+  .log-row { border-bottom: 1px solid var(--line); }
+  .log-head {
+    width: 100%; display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr) auto auto;
+    gap: 6px 22px; align-items: baseline; text-align: left;
+    padding: 17px 2px; background: none; border: 0; color: inherit;
+    font: inherit; cursor: pointer;
+    transition: background .16s;
+  }
+  .log-head:hover { background: var(--ground-3); }
+  .log-org {
+    font-family: var(--f-display); font-variation-settings: "wdth" 102, "wght" 680;
+    font-size: 18px; letter-spacing: -.005em;
+  }
+  .log-title { color: var(--ink-2); font-size: 16px; min-width: 0; }
+  .log-when { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; }
+  .log-mark {
+    font-family: var(--f-mono); font-size: 16px; line-height: 1; color: var(--hot);
+    width: 1em; text-align: center;
+  }
+  .log-head[aria-expanded="true"] .log-mark { color: var(--cool); }
+  .log-body { padding: 0 2px 24px; display: flex; flex-direction: column; gap: 14px; max-width: 68ch; }
+  .log-body p { margin: 0; color: var(--ink-2); }
+  .log-tools { display: flex; flex-wrap: wrap; gap: 7px; }
+  .log-tools li {
+    list-style: none; font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em;
+    border: 1px solid var(--line-strong); padding: 4px 8px; color: var(--muted);
+  }
+  .log-tools { margin: 0; padding: 0; }
+  .expand-all {
+    background: none; border: 1px solid var(--line-strong); color: var(--ink-2);
+    padding: 9px 15px; cursor: pointer; align-self: flex-start;
+    font-family: var(--f-mono); font-size: 11.5px; font-weight: 500;
+    letter-spacing: .1em; text-transform: uppercase;
+    margin-bottom: 18px; transition: border-color .16s, color .16s;
+  }
+  .expand-all:hover { border-color: var(--cool); color: var(--cool); }
+  .preamble { max-width: 62ch; color: var(--ink-2); margin: 0 0 24px; }
+
+  /* ---- year 2, in progress ---- */
+  .y2 { margin-top: 26px; padding-top: 20px; border-top: 1px dashed var(--line-strong); }
+  .y2-head {
+    display: flex; align-items: center; gap: 9px;
+    color: var(--cool); margin: 0 0 12px;
+  }
+  .y2-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--cool); flex: none;
+    animation: y2pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes y2pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+  .y2-list li { border-style: dashed; color: var(--muted); }
+  .y2-note { margin: 14px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--muted); max-width: 46ch; }
+
+  /* ---- methods band ---- */
+  .methods { border-bottom: 1px solid var(--line); background: var(--ground-3); }
+  .methods-in { padding-block: clamp(38px, 6vw, 62px); display: flex; flex-direction: column; gap: 26px; }
+  .methods-top { display: flex; align-items: baseline; gap: 18px; }
+  .methods-top h2 {
+    margin: 0; font-family: var(--f-display);
+    font-variation-settings: "wdth" 108, "wght" 700;
+    font-size: clamp(19px, 2.6vw, 25px); letter-spacing: -.01em; text-transform: uppercase;
+  }
+  .methods-top .rule { flex: 1; height: 1px; background: var(--line-strong); align-self: center; }
+  .m-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--line); border: 1px solid var(--line);
+  }
+  .m-col {
+    background: var(--ground-2); padding: 18px clamp(16px, 2vw, 22px);
+    display: flex; flex-direction: column; gap: 9px; min-width: 0;
+  }
+  .m-col .k { color: var(--hot); font-size: 10.5px; }
+  .m-col p { margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+  .m-col .qual { color: var(--muted); font-size: 13px; font-style: italic; }
+  @media (max-width: 900px) { .m-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .m-grid { grid-template-columns: 1fr; } }
+
+  @media (max-width: 700px) {
+    .log-head { grid-template-columns: minmax(0, 1fr) auto; }
+    .log-title { grid-column: 1; }
+    .log-when { grid-column: 1; }
+    .log-mark { grid-row: 1 / span 3; align-self: center; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <canvas id="flow" aria-hidden="true"></canvas>
+  <div class="shell hero-in">
+    <div class="eyebrow mono">
+      <span>Swansea, Wales</span><span>BEng Aerospace Engineering</span><span>Graduating 2028</span>
+    </div>
+    <h1>Nima<span class="second">Karimi</span></h1>
+    <p class="lead">Second year aerospace engineering student at Swansea University. I design things, test them, and write down what actually happened. Spent six weeks this summer at Thales in Crawley. Looking for a placement in aerospace or defence.</p>
+    <div class="links mono">
+      <a href="mailto:kariminima2005@gmail.com?subject=Placement%20enquiry">Email</a>
+      <a href="https://www.linkedin.com/in/nima-k-5b7b6a242" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Nima_Karimi_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+      <a href="#work">Selected work</a>
+    </div>
+    <div class="sim-ctl">
+      <div class="sim-row mono">
+        <label for="speed">Airspeed</label>
+        <input id="speed" type="range" min="5" max="140" step="1" value="40">
+        <span class="sim-read" id="speed-read">40 m/s</span>
+      </div>
+      <div class="sim-row mono">
+        <label for="aoa">Angle of attack</label>
+        <input id="aoa" type="range" min="-10" max="20" step="0.5" value="6">
+        <span class="sim-read" id="aoa-read">6.0&deg;</span>
+      </div>
+      <div class="sim-row mono">
+        <label for="flap">Trailing edge flap</label>
+        <input id="flap" type="range" min="0" max="30" step="1" value="0">
+        <span class="sim-read" id="flap-read">0&deg;</span>
+      </div>
+      <div class="sim-row mono">
+        <label for="droop">Leading edge droop</label>
+        <input id="droop" type="range" min="0" max="20" step="1" value="0">
+        <span class="sim-read" id="droop-read">0&deg;</span>
+      </div>
+      <hr>
+      <div class="sim-data">
+        <div class="sim-cell"><span class="k">Mach</span><span class="v" id="d-mach">0.12</span></div>
+        <div class="sim-cell"><span class="k">Reynolds</span><span class="v" id="d-re">2.7e6</span></div>
+        <div class="sim-cell"><span class="k">Dynamic pressure</span><span class="v" id="d-q">0.98 kPa</span></div>
+        <div class="sim-cell"><span class="k">CL</span><span class="v" id="d-cl">0.66</span></div>
+        <div class="sim-cell"><span class="k">Lift per metre</span><span class="v" id="d-lift">647 N</span></div>
+        <div class="sim-cell"><span class="k">State</span><span class="v ok" id="d-state">Attached</span></div>
+      </div>
+      <p class="sim-story" id="sim-story">&nbsp;</p>
+      <p class="sim-note mono" id="sim-note">&nbsp;</p>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="shell">
+    <div class="sec-head">
+      <span class="idx mono">01</span>
+      <h2>Selected work</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="sheets">
+
+      <article class="sheet">
+        <div class="sheet-body">
+          <h3>Egg carrying glider, design and flight test</h3>
+          <p>A first year design and build project, and a brief that is easy to state and hard to pass: design an aircraft, fly it, and land it with the payload still intact. The payload was an egg. The whole airframe was designed in SolidWorks before anything was cut.</p>
+          <p><strong>The aircraft flew.</strong> It then flipped in a strong crosswind and the motor detached from its mount. The cause was mine. The mounting hole had been drilled too shallow, so the fixing had far less thread engagement than the gust case demanded. It held on the ground and it held through the first part of the flight, which is exactly why nobody caught it.</p>
+          <p><strong>The egg survived.</strong> So against the brief we passed, and against any honest reading of the flight we did not. Both of those are true and I would rather say both than pick the flattering one.</p>
+          <p class="takeaway">What I took from it: a joint that carries the motor deserves a calculation, not a feel. Static load on the bench tells you almost nothing about a gust, and the failure was in the fastener, not the structure around it.</p>
+        </div>
+        <div class="titleblock">
+          <div class="tb-cell"><span class="k mono">Stage</span><span class="v">Year 1 · 2025 to 2026</span></div>
+          <div class="tb-cell"><span class="k mono">Tools</span><span class="v">SolidWorks, hand fabrication</span></div>
+          <div class="tb-cell"><span class="k mono">Payload</span><span class="v">One egg, intact on landing</span></div>
+          <div class="tb-cell"><span class="k mono">Outcome</span><span class="v flag-warm">Brief met, airframe lost</span></div>
+        </div>
+      </article>
+
+      <article class="sheet">
+        <div class="sheet-body">
+          <h3>Land speed record braking analysis</h3>
+          <p>A first year analysis exercise, leading a team of 6. We worked from Bloodhound thrust vector and velocity data in Excel to calculate the braking point a record attempt would need.</p>
+          <p>The arithmetic was not the hard part. <strong>The answer is only as good as what you assume the vehicle is doing at the moment braking starts</strong>, and every one of those assumptions is a choice somebody has to stand behind in the write up.</p>
+        </div>
+        <div class="titleblock">
+          <div class="tb-cell"><span class="k mono">Stage</span><span class="v">Year 1 · 2025 to 2026</span></div>
+          <div class="tb-cell"><span class="k mono">Tools</span><span class="v">Excel</span></div>
+          <div class="tb-cell"><span class="k mono">Role</span><span class="v">Team lead, analysis and write up</span></div>
+          <div class="tb-cell"><span class="k mono">Outcome</span><span class="v flag-cool">Report submitted</span></div>
+        </div>
+      </article>
+
+      <article class="sheet">
+        <div class="sheet-body">
+          <h3>Manufacturing pitch: 1,000 gliders on £10,000</h3>
+          <p>Led a team of 6 to plan production of a thousand gliders against a ten thousand pound investment. Unit cost model, marketing strategy and a quality optimisation plan, pitched and marked.</p>
+          <p>The cost model is where it stopped being an exercise. <strong>Every quality step you add is a cost you have to defend</strong>, and the plan only holds together if you can say what each check actually buys you at the end of the line.</p>
+        </div>
+        <div class="titleblock">
+          <div class="tb-cell"><span class="k mono">Stage</span><span class="v">Year 1 · 2025 to 2026</span></div>
+          <div class="tb-cell"><span class="k mono">Tools</span><span class="v">Excel, unit cost modelling</span></div>
+          <div class="tb-cell"><span class="k mono">Role</span><span class="v">Team lead, cost model and pitch</span></div>
+          <div class="tb-cell"><span class="k mono">Outcome</span><span class="v flag-cool">Scored 8 out of 10</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="industry">
+  <div class="shell">
+    <div class="sec-head">
+      <span class="idx mono">02</span>
+      <h2>Industry experience</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="sheets">
+
+      <article class="sheet">
+        <div class="sheet-body">
+          <h3>Summer internship, Thales UK, Crawley</h3>
+          <p>Six weeks over the summer of 2026, shadowing engineers on live projects. A lot of it was watching and asking questions, which is the honest description of an internship at this stage, but it was the first time I saw engineering run as a business rather than as coursework.</p>
+          <p>What I was following was <strong>how a requirement gets defined, allocated to a part of the system, and then verified</strong>, and what the documentation around all of that has to look like before anyone will sign it off. I also saw the MBSE toolchains in use on site, Capella and DOORS, closely enough to understand what they are for rather than to claim I can drive them.</p>
+          <p class="takeaway">What I took from it: the engineering is only half of the job. The other half is the record, written so that somebody who was not in the room can check the work years later.</p>
+        </div>
+        <div class="titleblock">
+          <div class="tb-cell"><span class="k mono">Stage</span><span class="v">Summer 2026 · 6 weeks</span></div>
+          <div class="tb-cell"><span class="k mono">Site</span><span class="v">Thales UK, Crawley</span></div>
+          <div class="tb-cell"><span class="k mono">Focus</span><span class="v">Requirements, verification, documentation</span></div>
+          <div class="tb-cell"><span class="k mono">Exposure</span><span class="v flag-cool">Capella, DOORS</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shell">
+    <div class="sec-head">
+      <span class="idx mono">03</span>
+      <h2>Laboratory and test</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="grid g3">
+      <div class="cell">
+        <span class="tag mono">Aerodynamics</span>
+        <h4>Wind tunnel testing</h4>
+        <p>Running models in the tunnel, taking force and pressure readings across a sweep, and reducing the raw numbers into coefficients that can be compared against theory.</p>
+      </div>
+      <div class="cell">
+        <span class="tag mono">Materials</span>
+        <h4>Material hardness testing</h4>
+        <p>Indentation testing across sample materials, recording hardness values and relating what the numbers show back to microstructure and processing history.</p>
+      </div>
+      <div class="cell">
+        <span class="tag mono">Thermofluids</span>
+        <h4>Heat pump cycle analysis</h4>
+        <p>Instrumenting a heat pump rig, logging the state points around the cycle, and working out the coefficient of performance against the ideal case.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="programmes">
+  <div class="shell">
+    <div class="sec-head">
+      <span class="idx mono">04</span>
+      <h2>Virtual experience programmes</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="preamble">Six Forage programmes, all completed. They are short and they are not employment, and I am not going to dress them up as either. They are here because each one left me with something specific, and this is the one place I have the room to say what.</p>
+    <button class="expand-all mono" type="button" id="expand-all" aria-pressed="false">Expand all</button>
+    <div class="log">
+      <article class="log-row">
+        <button class="log-head" type="button" aria-expanded="false" aria-controls="prog-1">
+          <span class="log-org">Siemens Mobility</span>
+          <span class="log-title">Operations Industrial Engineer</span>
+          <span class="log-when">Apr 2026</span>
+          <span class="log-mark" aria-hidden="true">+</span>
+        </button>
+        <div class="log-body" id="prog-1" hidden>
+          <p>Ran time studies on assembly tasks in a high speed rail manufacturing setting, then used the numbers to argue for a different line layout.</p>
+          <ul class="log-tools"><li>Time study</li><li>Line layout</li><li>Industrial engineering</li></ul>
+          <p class="takeaway">How narrow the evidence has to be before anyone will agree to move a workstation, and how fast a small layout change shows up in line output.</p>
+        </div>
+      </article>
+
+      <article class="log-row">
+        <button class="log-head" type="button" aria-expanded="false" aria-controls="prog-2">
+          <span class="log-org">British Airways</span>
+          <span class="log-title">Engineering</span>
+          <span class="log-when">Apr 2026</span>
+          <span class="log-mark" aria-hidden="true">+</span>
+        </button>
+        <div class="log-body" id="prog-2" hidden>
+          <p>Investigated an aircraft defect through to resolution, then forecast the material requirements and planned maintenance around it.</p>
+          <ul class="log-tools"><li>Defect investigation</li><li>Maintenance planning</li><li>Compliance</li></ul>
+          <p class="takeaway">How a defect turns into a paper trail, and why the record of what was done matters as much to compliance as the repair itself.</p>
+        </div>
+      </article>
+
+      <article class="log-row">
+        <button class="log-head" type="button" aria-expanded="false" aria-controls="prog-3">
+          <span class="log-org">GE Aerospace</span>
+          <span class="log-title">Explore Engineering</span>
+          <span class="log-when">Apr 2026</span>
+          <span class="log-mark" aria-hidden="true">+</span>
+        </button>
+        <div class="log-body" id="prog-3" hidden>
+          <p>Worked through jet engine design tasks, including energy source selection and the effect of compression and bypass ratio on engine efficiency.</p>
+          <ul class="log-tools"><li>Propulsion</li><li>Cycle efficiency</li></ul>
+          <p class="takeaway">A working feel for propulsion tradeoffs, where a gain in one figure is almost always paid for somewhere else on the engine.</p>
+        </div>
+      </article>
+
+      <article class="log-row">
+        <button class="log-head" type="button" aria-expanded="false" aria-controls="prog-4">
+          <span class="log-org">Johnson &amp; Johnson MedTech</span>
+          <span class="log-title">Robotics and Controls</span>
+          <span class="log-when">Jun 2026</span>
+          <span class="log-mark" aria-hidden="true">+</span>
+        </button>
+        <div class="log-body" id="prog-4" hidden>
+          <p>Analysed control system performance in surgical robotics, using Python to model the system behaviour and interpret the results.</p>
+          <ul class="log-tools"><li>Python</li><li>Control systems</li><li>Requirements</li></ul>
+          <p class="takeaway">Control response is measured against a requirement, not judged by eye. That habit has followed me into coursework.</p>
+        </div>
+      </article>
+
+      <article class="log-row">
+        <button class="log-head" type="button" aria-expanded="false" aria-controls="prog-5">
+          <span class="log-org">APA Group</span>
+          <span class="log-title">Engineering for New Energy</span>
+          <span class="log-when">Jun 2026</span>
+          <span class="log-mark" aria-hidden="true">+</span>
+        </button>
+        <div class="log-body" id="prog-5" hidden>
+          <p>Assessed technical feasibility on energy infrastructure tasks, processing datasets in Python to support design recommendations.</p>
+          <ul class="log-tools"><li>Python</li><li>Feasibility</li><li>Data handling</li></ul>
+          <p class="takeaway">Practice at deciding what a dataset can and cannot support before putting a recommendation behind it.</p>
+        </div>
+      </article>
+
+      <article class="log-row">
+        <button class="log-head" type="button" aria-expanded="false" aria-controls="prog-6">
+          <span class="log-org">Goldman Sachs</span>
+          <span class="log-title">Operations</span>
+          <span class="log-when">Apr 2026</span>
+          <span class="log-mark" aria-hidden="true">+</span>
+        </button>
+        <div class="log-body" id="prog-6" hidden>
+          <p>Transaction management tasks covering data analysis, process improvement, risk and cross functional work.</p>
+          <ul class="log-tools"><li>Process improvement</li><li>Risk</li><li>Data analysis</li></ul>
+          <p class="takeaway">How much operational risk comes from small unchecked details rather than large failures, and how process design exists to catch them.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shell">
+    <div class="sec-head">
+      <span class="idx mono">05</span>
+      <h2>Tools</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="tools">
+      <div class="tool">
+        <span class="name">MATLAB and Simulink</span>
+        <span class="lvl working mono">Working</span>
+        <span class="note">Numerical methods and simulation coursework, written up as formal technical reports.</span>
+      </div>
+      <div class="tool">
+        <span class="name">Python</span>
+        <span class="lvl working mono">Working</span>
+        <span class="note">NumPy, SciPy and openpyxl. Used to model control response in the Johnson and Johnson programme and to process datasets in the APA one.</span>
+      </div>
+      <div class="tool">
+        <span class="name">SolidWorks</span>
+        <span class="lvl working mono">Working</span>
+        <span class="note">The glider airframe was designed in it end to end. Now building toward the CSWA certification.</span>
+      </div>
+      <div class="tool">
+        <span class="name">Onshape</span>
+        <span class="lvl learning mono">Learning</span>
+        <span class="note">Browser based CAD, used alongside SolidWorks practice.</span>
+      </div>
+      <div class="tool">
+        <span class="name">Ansys</span>
+        <span class="lvl learning mono">Learning</span>
+        <span class="note">Working through the Ansys Innovation Courses.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="shell">
+    <div class="sec-head">
+      <span class="idx mono">06</span>
+      <h2>Education and alongside</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="edu">
+      <div>
+        <h4>BEng Aerospace Engineering</h4>
+        <p class="where">Swansea University · 2025 to 2028</p>
+        <div class="figure">
+          <span class="n">60.1%</span>
+          <span class="cap">Year 1 weighted average<br>across 120 credits · 2:1</span>
+        </div>
+        <ul class="modlist">
+          <li>Engineering Design 1</li>
+          <li>Problem Solving for Aerospace Engineers</li>
+          <li>Thermofluids</li>
+          <li>Design and Laboratory Classes 1</li>
+          <li>Introduction to Materials Engineering</li>
+          <li>Introduction to Aerospace Engineering</li>
+          <li>Engineering Skills for Aerospace Engineers</li>
+          <li>Applied Mechanics</li>
+          <li>Engineering Mathematics</li>
+        </ul>
+        <div class="y2">
+          <p class="y2-head mono"><span class="y2-dot" aria-hidden="true"></span>Year 2 · Underway now · 2026 to 2027</p>
+          <ul class="modlist y2-list">
+            <li>Aerospace Dynamics and Control</li>
+            <li>AI and Aerospace Systems</li>
+            <li>Engineering Design and Simulation</li>
+            <li>Spacecraft Systems Engineering</li>
+            <li>Subsonic Aerodynamics and Flight Mechanics</li>
+            <li>Research Project Preparation</li>
+          </ul>
+          <p class="y2-note">Currently enrolled, none of it finished. Each one lands on this page as it is done, not before.</p>
+        </div>
+      </div>
+      <div>
+        <h4>Alongside the degree</h4>
+        <p class="where">Swansea</p>
+        <div class="cell" style="padding:0; gap:16px; background:transparent;">
+          <p><strong style="font-weight:500;color:var(--ink)">Year 1 Subject Representative.</strong> Elected by the aerospace cohort to be the route between roughly a hundred and fifty first years and the academic staff. In practice that meant collecting what was going wrong on a module, taking it to the module lead in person, and then going back to the cohort with the answer, including the times the answer was no.</p>
+          <p>The useful part was learning to tell a complaint from a problem. Both arrive in the same tone of voice, and spending your credibility on the wrong one means the next thing you raise gets less of a hearing.</p>
+          <p><strong style="font-weight:500;color:var(--ink)">Member, Royal Aeronautical Society.</strong></p>
+          <p><strong style="font-weight:500;color:var(--ink)">Swansea University Tennis Club.</strong> Training weekly with the team and professional coaches.</p>
+          <p><strong style="font-weight:500;color:var(--ink)">A levels</strong> at Gower College Swansea in Mathematics and Physics, with the Welsh Baccalaureate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="methods">
+  <div class="shell methods-in">
+    <div class="methods-top">
+      <h2>Tools and methods</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="m-grid">
+      <div class="m-col">
+        <span class="k mono">CAD and modelling</span>
+        <p>SolidWorks, Onshape</p>
+        <span class="qual">Ansys in progress</span>
+      </div>
+      <div class="m-col">
+        <span class="k mono">Programming</span>
+        <p>MATLAB, Simulink, Python</p>
+        <span class="qual">NumPy, SciPy, openpyxl</span>
+      </div>
+      <div class="m-col">
+        <span class="k mono">Systems engineering</span>
+        <p>Capella, DOORS, IBM Rhapsody, Siemens NX</p>
+        <span class="qual">Working familiarity, seen in use rather than certified</span>
+      </div>
+      <div class="m-col">
+        <span class="k mono">Test and laboratory</span>
+        <p>Wind tunnel testing, material hardness testing, heat pump cycle analysis</p>
+      </div>
+      <div class="m-col">
+        <span class="k mono">Analysis and methods</span>
+        <p>Root cause analysis, unit cost modelling, time studies, process improvement, technical report writing</p>
+      </div>
+      <div class="m-col">
+        <span class="k mono">Engineering subjects</span>
+        <p>Aerodynamics, structural analysis, fluid mechanics, propulsion, systems integration</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="shell contact-in">
+    <span class="mono" style="color:var(--cool)">07 / Contact</span>
+    <h2>Open to placements for <em>2027</em></h2>
+    <p class="lead">Aerospace, defence or manufacturing operations, anywhere in the UK. Happy to talk about any of the work above, including the parts that did not go to plan.</p>
+    <div class="specblock">
+      <div class="titleblock">
+        <div class="tb-cell"><span class="k mono">Placement year</span><span class="v">2027 to 2028</span></div>
+        <div class="tb-cell"><span class="k mono">Based</span><span class="v">Swansea, will relocate UK wide</span></div>
+        <div class="tb-cell"><span class="k mono">Sectors</span><span class="v flag-cool">Aerospace, defence, manufacturing</span></div>
+        <div class="tb-cell"><span class="k mono">Graduating</span><span class="v">2028, BEng Aerospace</span></div>
+      </div>
+    </div>
+    <div class="links mono">
+      <a href="mailto:kariminima2005@gmail.com?subject=Placement%20enquiry">kariminima2005@gmail.com</a>
+      <a href="https://www.linkedin.com/in/nima-k-5b7b6a242" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Nima_Karimi_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+  </div>
+  <div class="shell foot mono">
+    <span>Nima Karimi</span>
+    <span>Swansea, Wales</span>
+    <span>Last updated September 2026</span>
+  </div>
+</section>
+
+<script>
+(function () {
+  var cv = document.getElementById('flow');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W = 0, H = 0, dpr = 1;
+  var parts = [];
+  var N = 900;
+  var groundRGB = [11, 19, 25];
+  var frame = 0;
+  var flush = 0;            // frames of hard fade after the shape moves, so no ghost is left
+
+  // control state, in radians
+  var aoa = 6 * Math.PI / 180;
+  var flap = 0;             // trailing edge flap, hinged at 75% chord
+  var droop = 0;            // leading edge droop, hinged at 15% chord
+  var V = 40;               // freestream, m/s
+
+  // sea level ISA, and a chord of one metre so the numbers mean something
+  var RHO = 1.225, A_SOUND = 340.3, NU = 1.48e-5, CHORD_M = 1.0;
+
+  // thin aerofoil flap effectiveness, tau = 1 - (theta - sin theta) / pi
+  // hinge at x/c = 0.75 -> tau = 0.61;  hinge at x/c = 0.15 -> tau = 0.03
+  var TAU_TE = 0.61, TAU_LE = 0.03;
+  var HINGE_TE = 0.75, HINGE_LE = 0.15;
+  var THICK = 0.12;
+
+  function alphaEff() { return aoa + TAU_TE * flap + TAU_LE * droop; }
+
+  function readGround() {
+    var v = getComputedStyle(document.documentElement).getPropertyValue('--ground').trim();
+    var m = /^#?([0-9a-f]{6})$/i.exec(v);
+    if (m) {
+      var n = parseInt(m[1], 16);
+      groundRGB = [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+  }
+
+  var geo = {};
+  function layout() {
+    var r = cv.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = Math.max(1, r.width); H = Math.max(1, r.height);
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    // smaller than the space it sits in, so the curvature of the flow around it is visible
+    geo.chord = W < 760 ? W * 0.58 : Math.min(W * 0.34, 470);
+    var reach = geo.chord * 0.70;
+    geo.cx = W < 760 ? W * 0.5 : W - reach - 72;
+    geo.cy = W < 760 ? H * 0.80 : H * 0.40;
+    geo.a = 0.60;
+    geo.sy = 0.24;
+    ctx.fillStyle = 'rgb(' + groundRGB.join(',') + ')';
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  // Section geometry in chord fractions, screen y running downward.
+  // Each control surface bends the CAMBER LINE through a parabolic fillet rather than a
+  // hard hinge, so the slope is continuous and the outline never creases. Thickness is then
+  // laid on normal to that camber line, the way a real section is constructed.
+  var BLEND_TE = 0.10, BLEND_LE = 0.07;
+
+  function ramp(x, h, b) {          // 0 ahead of the hinge, (x - h) behind it, filleted between
+    if (x <= h - b) return 0;
+    if (x >= h + b) return x - h;
+    var d = x - (h - b);
+    return d * d / (4 * b);
+  }
+  function dramp(x, h, b) {
+    if (x <= h - b) return 0;
+    if (x >= h + b) return 1;
+    return (x - (h - b)) / (2 * b);
+  }
+  function rampRev(x, h, b) {       // mirrored, for a surface that bends ahead of its hinge
+    if (x >= h + b) return 0;
+    if (x <= h - b) return h - x;
+    var d = (h + b) - x;
+    return d * d / (4 * b);
+  }
+  function drampRev(x, h, b) {
+    if (x >= h + b) return 0;
+    if (x <= h - b) return -1;
+    return -((h + b) - x) / (2 * b);
+  }
+
+  function camber(x) {
+    return Math.tan(flap) * ramp(x, HINGE_TE, BLEND_TE)
+         + Math.tan(droop) * rampRev(x, HINGE_LE, BLEND_LE);
+  }
+  function dcamber(x) {
+    return Math.tan(flap) * dramp(x, HINGE_TE, BLEND_TE)
+         + Math.tan(droop) * drampRev(x, HINGE_LE, BLEND_LE);
+  }
+  function thick(x) {
+    return 5 * THICK * (0.2969 * Math.sqrt(x) - 0.1260 * x - 0.3516 * x * x + 0.2843 * x * x * x - 0.1015 * x * x * x * x);
+  }
+  // surface point in body coordinates; side -1 is the upper surface, +1 the lower
+  function surf(x, side, c, pt) {
+    var yc = camber(x), yt = thick(x), th = Math.atan(dcamber(x));
+    pt[0] = (x - 0.5) * c - side * yt * Math.sin(th) * c;
+    pt[1] = yc * c + side * yt * Math.cos(th) * c;
+  }
+
+  function field(px, py, out) {
+    var dx = px - geo.cx, dy = py - geo.cy;
+    var ca = Math.cos(-geo.aoaScreen), sa = Math.sin(-geo.aoaScreen);
+    var rx = (dx * ca - dy * sa) / (geo.chord * 0.5);
+    var ry = (dx * sa + dy * ca) / (geo.chord * 0.5 * geo.sy);
+    var r2 = rx * rx + ry * ry;
+    if (r2 < 1e-4) r2 = 1e-4;
+    var a2 = geo.a * geo.a;
+    var u = 1 - a2 * (rx * rx - ry * ry) / (r2 * r2);
+    var v = -2 * a2 * rx * ry / (r2 * r2);
+    // circulation follows the EFFECTIVE incidence, so camber from the flap makes lift
+    // at zero angle of attack, the way it does on the real thing
+    var G = 4.75 * Math.sin(alphaEff());
+    u += -G * ry / r2;
+    v += G * rx / r2;
+    v *= geo.sy;
+    out[0] = u * ca + v * sa;
+    out[1] = -u * sa + v * ca;
+    out[2] = r2;
+  }
+
+  // true when the point is inside the section as drawn, deflections included
+  function insideSection(px, py) {
+    var dx = px - geo.cx, dy = py - geo.cy;
+    var ca = Math.cos(geo.aoaScreen), sa = Math.sin(geo.aoaScreen);
+    var bx = dx * ca + dy * sa;
+    var by = -dx * sa + dy * ca;
+    var x = bx / geo.chord + 0.5;
+    if (x < 0 || x > 1) return false;
+    var c = geo.chord;
+    var yc = camber(x) * c;
+    var half = thick(x) * c / Math.cos(Math.atan(dcamber(x)));
+    return by > yc - half - 1.2 && by < yc + half + 1.2;
+  }
+
+  function spawn(p, anywhere) {
+    p.x = anywhere ? Math.random() * W : -Math.random() * W * 0.45;
+    p.y = Math.random() * H;
+    p.life = 120 + Math.random() * (W / 2.4) * 1.3;
+  }
+
+  function init() {
+    N = Math.max(700, Math.min(2800, Math.round(W * H / 1000)));
+    parts.length = 0;
+    for (var i = 0; i < N; i++) { var p = {}; spawn(p, true); parts.push(p); }
+  }
+
+  var out = [0, 0, 0];
+  function step(trail) {
+    var fade = trail ? (flush > 0 ? 0.55 : 0.085) : 1;
+    if (flush > 0) flush--;
+    ctx.fillStyle = 'rgba(' + groundRGB.join(',') + ',' + fade + ')';
+    ctx.fillRect(0, 0, W, H);
+    ctx.lineWidth = 1;
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      field(p.x, p.y, out);
+      if (out[2] < 0.03 || insideSection(p.x, p.y)) { spawn(p, false); continue; }
+      var sp = Math.sqrt(out[0] * out[0] + out[1] * out[1]);
+      // travel per frame scales with airspeed, split into enough sub steps that a fast
+      // particle can never jump straight through the section
+      var travel = 2.4 * (0.45 + V / 55);
+      var subs = Math.max(2, Math.ceil(travel / 1.4));
+      var h = travel / subs;
+      var nx = p.x, ny = p.y, dead = false;
+      for (var k = 0; k < subs; k++) {
+        nx += out[0] * h; ny += out[1] * h;
+        if (insideSection(nx, ny)) { dead = true; break; }
+        field(nx, ny, out);
+        if (out[2] < 0.03) { dead = true; break; }
+      }
+      if (dead) { spawn(p, false); continue; }
+      var t = Math.max(0, Math.min(1, (sp - 0.55) / 0.95));
+      var cr = Math.round(79 + t * 176);
+      var cg = Math.round(195 - t * 110);
+      var cb = Math.round(217 - t * 179);
+      ctx.strokeStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',' + (0.15 + t * 0.34) + ')';
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+      ctx.lineTo(nx, ny);
+      ctx.stroke();
+      p.x = nx; p.y = ny;
+      p.life--;
+      if (p.life < 0 || p.x > W + 40 || p.y < -40 || p.y > H + 40) spawn(p, false);
+    }
+    drawBody();
+  }
+
+  function drawBody() {
+    var c = geo.chord, i, x, M = 140;
+    var pt = [0, 0];
+    ctx.save();
+    ctx.translate(geo.cx, geo.cy);
+    ctx.rotate(geo.aoaScreen);
+    ctx.beginPath();
+    for (i = 0; i <= M; i++) {                 // upper surface, tail to nose, cosine spaced
+      x = (1 - Math.cos((1 - i / M) * Math.PI)) / 2;
+      surf(x, -1, c, pt);
+      if (i === 0) ctx.moveTo(pt[0], pt[1]); else ctx.lineTo(pt[0], pt[1]);
+    }
+    for (i = 0; i <= M; i++) {                 // lower surface, nose back to tail
+      x = (1 - Math.cos((i / M) * Math.PI)) / 2;
+      surf(x, 1, c, pt);
+      ctx.lineTo(pt[0], pt[1]);
+    }
+    ctx.closePath();
+    ctx.fillStyle = 'rgb(' + groundRGB.join(',') + ')';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255,85,38,.92)';
+    ctx.lineWidth = 2.4;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    // camber line, which is what the controls are actually bending
+    if (flap !== 0 || droop !== 0) {
+      ctx.beginPath();
+      for (i = 0; i <= 60; i++) {
+        x = i / 60;
+        if (i === 0) ctx.moveTo((x - 0.5) * c, camber(x) * c);
+        else ctx.lineTo((x - 0.5) * c, camber(x) * c);
+      }
+      ctx.strokeStyle = 'rgba(79,195,217,.5)';
+      ctx.lineWidth = 1.1;
+      ctx.stroke();
+    }
+
+    // chord line, a drawing convention rather than decoration
+    ctx.beginPath();
+    ctx.setLineDash([7, 7]);
+    ctx.moveTo(-c * 0.66, 0);
+    ctx.lineTo(c * 0.66, 0);
+    ctx.strokeStyle = 'rgba(255,85,38,.42)';
+    ctx.lineWidth = 1.3;
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // hinge marks, so it is clear where each surface is pivoting
+    [[HINGE_LE, droop], [HINGE_TE, flap]].forEach(function (h) {
+      if (h[1] === 0) return;
+      ctx.beginPath();
+      ctx.arc((h[0] - 0.5) * c, camber(h[0]) * c, 3, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(79,195,217,.95)';
+      ctx.fill();
+    });
+    ctx.restore();
+  }
+
+  function settle() { for (var k = 0; k < 150; k++) step(true); }
+
+  var sliders = {
+    speed: document.getElementById('speed'),
+    aoa: document.getElementById('aoa'),
+    flap: document.getElementById('flap'),
+    droop: document.getElementById('droop')
+  };
+  var reads = {
+    speed: document.getElementById('speed-read'),
+    aoa: document.getElementById('aoa-read'),
+    flap: document.getElementById('flap-read'),
+    droop: document.getElementById('droop-read')
+  };
+  var note = document.getElementById('sim-note');
+
+  function apply() {
+    var aDeg = parseFloat(sliders.aoa.value);
+    var fDeg = parseFloat(sliders.flap.value);
+    var dDeg = parseFloat(sliders.droop.value);
+    V = parseFloat(sliders.speed.value);
+    aoa = aDeg * Math.PI / 180;
+    flap = fDeg * Math.PI / 180;
+    droop = dDeg * Math.PI / 180;
+    geo.aoaScreen = aoa;
+    reads.speed.textContent = V.toFixed(0) + ' m/s';
+    reads.aoa.textContent = aDeg.toFixed(1) + '°';
+    reads.flap.textContent = fDeg.toFixed(0) + '°';
+    reads.droop.textContent = dDeg.toFixed(0) + '°';
+
+    var cl = 2 * Math.PI * alphaEff();
+    var mach = V / A_SOUND;
+    var re = V * CHORD_M / NU;
+    var q = 0.5 * RHO * V * V;
+    var lift = q * CHORD_M * cl;
+    var stallAt = 15 + 0.30 * dDeg - 0.15 * fDeg;
+    var stalled = aDeg > stallAt;
+    var near = !stalled && aDeg > stallAt - 3;
+    var fast = mach > 0.3;
+
+    set('d-mach', mach.toFixed(2), fast ? 'bad' : '');
+    set('d-re', (re / 1e6).toFixed(1) + 'e6', '');
+    set('d-q', q < 1000 ? q.toFixed(0) + ' Pa' : (q / 1000).toFixed(2) + ' kPa', '');
+    set('d-cl', cl.toFixed(2), '');
+    set('d-lift', Math.abs(lift) < 1000 ? lift.toFixed(0) + ' N' : (lift / 1000).toFixed(2) + ' kN', '');
+    set('d-state', stalled ? 'Stalled' : (near ? 'Near stall' : 'Attached'),
+        stalled ? 'bad' : (near ? 'warn' : 'ok'));
+
+    // what is actually happening to this section, right now
+    var bits = [];
+    if (stalled) {
+      bits.push('At ' + aDeg.toFixed(1) + '° the real section would have separated by now, somewhere around ' +
+        stallAt.toFixed(0) + '°. This model is inviscid, so it has no boundary layer to separate and it carries on making lift the wing would have already lost.');
+    } else if (near) {
+      bits.push('At ' + aDeg.toFixed(1) + '° the section is close to its limit, near ' + stallAt.toFixed(0) +
+        '°. The suction peak over the nose is steep and the boundary layer behind it is running out of energy.');
+    } else if (Math.abs(cl) < 0.05) {
+      bits.push('Near zero lift. The flow is symmetric top to bottom and the wake leaves straight, so there is almost nothing for the section to push against.');
+    } else {
+      bits.push('Flow accelerates over the upper surface and slows underneath, and the wake leaves with a ' +
+        (cl > 0 ? 'downward' : 'upward') + ' deflection. That turning of the air is the lift.');
+    }
+
+    if (fDeg > 0) {
+      bits.push('The flap adds ' + (0.61 * fDeg).toFixed(1) + '° of effective incidence through camber, which is why CL is ' +
+        cl.toFixed(2) + ' rather than ' + (2 * Math.PI * (aoa + TAU_LE * droop)).toFixed(2) + '.');
+    }
+    if (dDeg > 0 && !stalled) {
+      bits.push('The droop is worth almost nothing in lift. It is buying stall margin, which is what a leading edge device is for.');
+    }
+
+    bits.push('At ' + V.toFixed(0) + ' m/s that is ' +
+      (Math.abs(lift) < 1000 ? Math.abs(lift).toFixed(0) + ' N' : (Math.abs(lift) / 1000).toFixed(2) + ' kN') +
+      ' for every metre of span, on a one metre chord in sea level air.');
+
+    if (fast) {
+      bits.push('Above Mach 0.3 the incompressible assumption behind all of this stops holding, and the real pressures would need a compressibility correction.');
+    }
+
+    document.getElementById('sim-story').textContent = bits.join(' ');
+    note.className = 'sim-note mono';
+    note.textContent = 'Potential flow, thin aerofoil theory, one metre chord, ISA sea level. The pattern does not change with airspeed because potential flow has no Reynolds number in it. The numbers do. Stall angle is indicative, not computed.';
+
+    flush = 6;
+    if (reduce) { ctx.fillStyle = 'rgb(' + groundRGB.join(',') + ')'; ctx.fillRect(0, 0, W, H); settle(); }
+  }
+
+  function set(id, text, cls) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = text;
+    el.className = 'v' + (cls ? ' ' + cls : '');
+  }
+
+  Object.keys(sliders).forEach(function (k) {
+    if (sliders[k]) sliders[k].addEventListener('input', apply);
+  });
+
+  function loop() {
+    frame++;
+    if (frame % 90 === 0) readGround();
+    step(true);
+    requestAnimationFrame(loop);
+  }
+
+  readGround();
+  geo.aoaScreen = aoa;
+  layout();
+  init();
+  apply();
+  if (reduce) { settle(); } else { loop(); }
+
+  var t;
+  window.addEventListener('resize', function () {
+    clearTimeout(t);
+    t = setTimeout(function () { readGround(); layout(); init(); if (reduce) { settle(); } }, 160);
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var heads = Array.prototype.slice.call(document.querySelectorAll('.log-head'));
+  function setOpen(head, open) {
+    var body = document.getElementById(head.getAttribute('aria-controls'));
+    head.setAttribute('aria-expanded', open ? 'true' : 'false');
+    head.querySelector('.log-mark').textContent = open ? '\u2212' : '+';
+    if (body) body.hidden = !open;
+  }
+  heads.forEach(function (head) {
+    head.addEventListener('click', function () {
+      setOpen(head, head.getAttribute('aria-expanded') !== 'true');
+      syncAll();
+    });
+  });
+  var all = document.getElementById('expand-all');
+  function syncAll() {
+    if (!all) return;
+    var open = heads.every(function (h) { return h.getAttribute('aria-expanded') === 'true'; });
+    all.setAttribute('aria-pressed', open ? 'true' : 'false');
+    all.textContent = open ? 'Collapse all' : 'Expand all';
+  }
+  if (all) {
+    all.addEventListener('click', function () {
+      var open = all.getAttribute('aria-pressed') !== 'true';
+      heads.forEach(function (h) { setOpen(h, open); });
+      syncAll();
+    });
+  }
+  // open the first one so the section is never a wall of closed rows
+  if (heads.length) { setOpen(heads[0], true); syncAll(); }
+})();
+</script>
+</body>
+</html>
